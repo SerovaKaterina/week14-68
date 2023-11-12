@@ -1,3 +1,6 @@
+body {
+  background-color: rgb(248, 220, 185);
+}
 .body_container {
   width: 1000px;
   margin: 0 auto;
@@ -8,4 +11,7 @@
   text-align: start;
   font-size: large;
   font-weight: bolder;
+}
+div span {
+  color: rgb(181, 38, 38);
 }
