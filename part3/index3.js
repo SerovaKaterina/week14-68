@@ -1,4 +1,5 @@
-let directors = [
+//Создаем массив с режиссерами и их работами
+const directors = [
     {
       name: 'Стивен Спилберг',
       career: 'Продюсер, Режиссер, Актер, Сценарист, Монтажер',
@@ -45,33 +46,33 @@ let directors = [
 
   const directorCard = document.querySelector(".directors__card");
   const films = document.querySelector(".films");
-
+//Перебор элементов массива
   directors.forEach((item)=> {
     const card = document.createElement ("div");
     card.className = 'director_card';
     directorCard.prepend(card);
-
+//создание див для имени
     const directorName = document.createElement ("div");
     directorName.className = "director_card__name";
     card.append (directorName);
     directorName.innerHTML = item.name;
-
+//Создание див для должности
     const directorJob = document.createElement ("div");
     directorJob.className = "director_card__job";
     card.append (directorJob);
     directorJob.innerHTML = item.career;
-
+//Создание ссылки для фильмографии
     const directorFilmography = document.createElement ("a");
     directorFilmography.className = "director_card__films";
     directorFilmography.href = item.films;
     card.append (directorFilmography);
     directorFilmography.innerHTML = "Фильмография";
-
+//Создание массива из лучших фильмов
 const topFilmList = [];
-
+//Перебор элементов существующего массива в новый массив
 directors.forEach((item) => {
     topFilmList.push(item.top_rated_film);
 })
-
+//Отображение элементов массива
 films.innerText = topFilmList.join(" , ");
 });
