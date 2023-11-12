@@ -1,0 +1,42 @@
+.container {
+  width: 1200px;
+  height: 1500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  color: #e0cba0;
+  background-image: url(/part3/assets3/images/film.jpg);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.h1,
+.h2 {
+  text-align: center;
+  padding-bottom: 40px;
+  padding-top: 80px;
+}
+.directors__card {
+  width: 900px;
+  margin: 0 auto;
+}
+.director_card {
+  padding-bottom: 30px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 3px solid rgb(106, 197, 176);
+}
+.director_card__name {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: rgb(106, 197, 176);
+}
+.director_card__films {
+  padding-left: 80%;
+  color: rgb(106, 197, 176);
+}
+.films {
+  text-align: center;
+}
+.director_card__films:hover {
+  color: #e0cba0;
+}
