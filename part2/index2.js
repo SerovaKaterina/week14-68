@@ -36,3 +36,18 @@ excMark.textContent = grades.filter(mark => mark >= 60).length;
 let poorMark = document.querySelector('.poor');
 poorMark.textContent = grades.filter(mark => mark < 60).length;
 //7. Преобразовываем отметки в буквенный формат.
+let format = document.querySelector('.abc');
+let formatLetter = grades.map(num=> {
+    if(num>=80 && num<=100) {
+      return "A";
+    } else if (num>=60 && num<=79) {
+      return "B";
+    } else if (num>=40 && num<=59) {
+      return "C";
+    } else if (num>=20 && num<=39) {
+      return "D";
+    } else {
+      return "E";
+    }
+  });
+format.textContent = formatLetter.join(', ');
