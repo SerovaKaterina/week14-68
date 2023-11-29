@@ -2,7 +2,7 @@
 //1.Создаем пустой массив, заполняем его случайными оценками от 1 до 100, для 12 студентов.
 let grades = [];
 for(let i = 1; i < 13; i++) {
-    let randomMark = Math.round(Math.random() * 100) + 1;
+    let randomMark = Math.floor(Math.random() * 100) + 1;
     grades.push(randomMark);
 }
 let arrGrades = document.querySelector('.grades');
