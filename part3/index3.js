@@ -46,6 +46,12 @@ const directors = [
 
   const directorCard = document.querySelector(".directors__card");
   const films = document.querySelector(".films");
+  //Создание массива из лучших фильмов
+const topFilmList = [];
+//Перебор элементов существующего массива в новый массив
+directors.forEach((item) => {
+    topFilmList.push(item.top_rated_film);
+})
 //Перебор элементов массива
   directors.forEach((item)=> {
     const card = document.createElement ("div");
@@ -67,12 +73,6 @@ const directors = [
     directorFilmography.href = item.films;
     card.append (directorFilmography);
     directorFilmography.innerHTML = "Фильмография";
-//Создание массива из лучших фильмов
-const topFilmList = [];
-//Перебор элементов существующего массива в новый массив
-directors.forEach((item) => {
-    topFilmList.push(item.top_rated_film);
-})
 //Отображение элементов массива
 films.innerText = topFilmList.join(" , ");
 });
